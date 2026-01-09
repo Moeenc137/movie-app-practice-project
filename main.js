@@ -21,5 +21,9 @@ form.addEventListener("submit", (e) => {
   const searchTerm = search;
   if (searchTerm && searchTerm !== "") {
     getMovies(SEARCH_API + searchTerm);
+
+    search.value = "";
+  } else {
+    window.location.reload();
   }
 });
